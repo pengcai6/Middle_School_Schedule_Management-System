@@ -1,0 +1,20 @@
+# 1 创建存储过程，检测指定教师、指定节次是否有课；
+# 2 创建存储过程，生成指定班级的课程表；
+# 3 创建存储过程，生成指定老师的课程表
+
+-- 声明一个变量来存储输出
+SET @hasClass = FALSE;
+-- 调用存储过程
+CALL CheckTeacherSchedule(1, 2, 2, @hasClass);
+-- 查看结果
+SELECT @hasClass;
+
+
+
+-- 测试存储过程 GenerateClassSchedule
+SET @classId = 1;
+CALL GenerateClassSchedule(@classId);
+
+
+SET @teacherId = 1;
+CALL GenerateTeacherSchedule(@teacherId);
