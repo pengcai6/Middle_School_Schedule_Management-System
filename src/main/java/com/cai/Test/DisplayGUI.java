@@ -103,7 +103,7 @@ public class DisplayGUI {
         frame.add(mainPanel);
 
         // 设置按钮监听
-        button1.addActionListener(e -> {
+        button1.addActionListener(_ -> {
             try {
                 new ClassTableFrame();
             } catch (IOException ex) {
@@ -111,9 +111,9 @@ public class DisplayGUI {
             }
         });
 
-        button2.addActionListener(e -> new ClassAddFrame());
+        button2.addActionListener(_ -> new ClassAddFrame());
 
-        button3.addActionListener(e -> {
+        button3.addActionListener(_ -> {
             try {
                 new ClassDeleteFrame();
             } catch (IOException ex) {
@@ -121,9 +121,9 @@ public class DisplayGUI {
             }
         });
 
-        button4.addActionListener(e -> new ClassUpdateFrame());
+        button4.addActionListener(_ -> new ClassUpdateFrame());
 
-        button5.addActionListener(e -> {
+        button5.addActionListener(_ -> {
             try {
                 new StudentTableFrame();
             } catch (IOException ex) {
@@ -131,9 +131,9 @@ public class DisplayGUI {
             }
         });
 
-        button6.addActionListener(e -> new StudentAddFrame());
+        button6.addActionListener(_ -> new StudentAddFrame());
 
-        button7.addActionListener(e -> {
+        button7.addActionListener(_ -> {
             try {
                 new StudentDeleteFrame();
             } catch (IOException ex) {
@@ -141,9 +141,9 @@ public class DisplayGUI {
             }
         });
 
-        button8.addActionListener(e -> new StudentUpdateFrame());
+        button8.addActionListener(_ -> new StudentUpdateFrame());
 
-        button9.addActionListener(e -> {
+        button9.addActionListener(_ -> {
             try {
                 new CourseTableFrame();
             } catch (IOException ex) {
@@ -151,9 +151,9 @@ public class DisplayGUI {
             }
         });
 
-        button10.addActionListener(e -> new CourseAddFrame());
+        button10.addActionListener(_ -> new CourseAddFrame());
 
-        button11.addActionListener(e -> {
+        button11.addActionListener(_ -> {
             try {
                 new CourseDeleteFrame();
             } catch (IOException ex) {
@@ -161,11 +161,9 @@ public class DisplayGUI {
             }
         });
 
-        button12.addActionListener(e -> {
-                new CourseUpdateFrame();
-        });
+        button12.addActionListener(_ -> new CourseUpdateFrame());
 
-        button13.addActionListener(e -> {
+        button13.addActionListener(_ -> {
             try {
                 new TeacherTableFrame();
             } catch (IOException ex) {
@@ -173,11 +171,9 @@ public class DisplayGUI {
             }
         });
 
-        button14.addActionListener(e -> {
-                new TeacherAddFrame();
-        });
+        button14.addActionListener(_ -> new TeacherAddFrame());
 
-        button15.addActionListener(e -> {
+        button15.addActionListener(_ -> {
             try {
                 new TeacherDeleteFrame();
             } catch (IOException ex) {
@@ -185,27 +181,15 @@ public class DisplayGUI {
             }
         });
 
-        button16.addActionListener(e -> {
-                new TeacherUpdateFrame();
-        });
+        button16.addActionListener(_ -> new TeacherUpdateFrame());
 
-        button17.addActionListener(e -> {
-                SwingUtilities.invokeLater(() -> {
-            new ScheduleManager().setVisible(true);
-        });
-        });
+        button17.addActionListener(_ -> SwingUtilities.invokeLater(() -> new ScheduleManager().setVisible(true)));
 
-        button18.addActionListener(e -> {
-                new ClassScheduleViewer().setVisible(true);
-        });
+        button18.addActionListener(_ -> new ClassScheduleViewer().setVisible(true));
 
-        button19.addActionListener(e -> {
-                new TeacherScheduleViewer().setVisible(true);
-        });
+        button19.addActionListener(_ -> new TeacherScheduleViewer().setVisible(true));
 
-        button20.addActionListener(e -> {
-                new AutoSchedule();
-        });
+        button20.addActionListener(_ -> new AutoSchedule());
 
         // 设置框架可见
         frame.setVisible(true);

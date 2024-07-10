@@ -23,7 +23,7 @@ import java.util.List;
 public class AutoSchedule {
 
     private static final Logger logger = LoggerFactory.getLogger(AutoSchedule.class);
-    private static SqlSessionFactory sqlSessionFactory;
+    private static final SqlSessionFactory sqlSessionFactory;
 
     static {
         String resource = "mybatis-config.xml"; // 核心配置文件
@@ -160,10 +160,6 @@ public class AutoSchedule {
         } catch (Exception e) {
             logger.error("Error during scheduling: {}", e.getMessage(), e);
         }
-    }
-
-    public static void main(String[] args) {
-        new AutoSchedule(); // 运行自动排课
     }
 
     // 初始化课程列表和教师列表
