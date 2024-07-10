@@ -8,10 +8,15 @@ import java.io.InputStream;
 //工具类：静态方法+构造器
 public class mybatisUtil {
     static SqlSessionFactory sqlSessionFactory = null;
-    private mybatisUtil() throws IOException {
+    static  {
 
         //基于配置文件路径，创建字节输入流对象
-        InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+        InputStream is = null;
+        try {
+            is = Resources.getResourceAsStream("mybatis-config.xml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         //创建SqlSessionFactory工厂类对象
         sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
     }
