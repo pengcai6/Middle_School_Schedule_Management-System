@@ -39,13 +39,14 @@
 
     <mappers>
         <!--加载映射文件,放到src下即可-->
-        <mapper resource="com/cai/dao/ClassMapper.xml"/>
-        <mapper resource="com/cai/dao/CourseMapper.xml"/>
-        <mapper resource="com/cai/dao/ScheduleMapper.xml"/>
-        <mapper resource="com/cai/dao/StudentMapper.xml"/>
-        <mapper resource="com/cai/dao/TeacherMapper.xml"/>
-        <mapper resource="com/cai/dao/TimeSlotMapper.xml"/>
-
+<!--        <mapper resource="com/cai/dao/ClassMapper.xml"/>-->
+<!--        <mapper resource="com/cai/dao/CourseMapper.xml"/>-->
+<!--        <mapper resource="com/cai/dao/ScheduleMapper.xml"/>-->
+<!--        <mapper resource="com/cai/dao/StudentMapper.xml"/>-->
+<!--        <mapper resource="com/cai/dao/TeacherMapper.xml"/>-->
+<!--        <mapper resource="com/cai/dao/TimeSlotMapper.xml"/>-->
+<!--使用mapper接口加载配置文件-->
+        <package name="com.cai.dao"/>
 
     </mappers>
 </configuration>

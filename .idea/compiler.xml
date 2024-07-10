@@ -8,7 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Middle School_Schedule_Management_System" />
-        <module name="Middle_School_Schedule_Management System" />
+        <module name="Middle_School_Schedule_Management_System" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
